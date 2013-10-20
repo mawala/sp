@@ -45,9 +45,7 @@
 8\. Będąc w katalogu dokumenty połącz skopiowane 3 pliki w plik odtworzono.txt, tak aby otrzymać plik o zawartości identycznej z wykonano.txt: 
 Następnie plik odtworzono.txt skopiuj do katalogu wazne-sprawy.
 
-  cat xaa > odtworzono.txt
-  cat xab >> odtworzono.txt
-  cat xac >> odtworzono.txt
+  cat xaa xab xac > odtworzono.txt
   
   cp odtworzono.txt ~/temp/dom/wazne-sprawy
 
@@ -67,4 +65,8 @@ Następnie plik odtworzono.txt skopiuj do katalogu wazne-sprawy.
   
 -Wyświetl kalendarz na październik, listopad i grudzień 2009 r. w taki sposób:
 
+  cal -3 11 2009
   
+-I jeszcze raz na wrzesień i październik oraz na październik i listopad 2009 r z miesiącami obok siebie (cal, cut?):
+
+11\. Jaki był dzień tygodnia 25 maja 1975 r. (cal i date)
