@@ -1,4 +1,4 @@
-sp2
+sp
 ===
 
-zadania z sp
+zadania z Srodowiska Programisty
