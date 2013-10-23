@@ -81,3 +81,17 @@ Następnie plik odtworzono.txt skopiuj do katalogu wazne-sprawy.
 ```sh
   date +%A -d '1975-05-25'
 ```
+
+###Laboratorium 2
+
+1\. Wyświetl na ekran 2 pierwsze wiersze pliku program.c. (head)
+```sh
+head -2l program.c
+```
+
+2\. Wyświetl na ekran 4 ostatnie wiersze pliku program.c. (head, tail)
+```sh
+tail -4l program.c
+```
+
+3\. W pliku program.c znajdź wszystkie wiersze z wystąpieniem słowa „main”. (grep)
