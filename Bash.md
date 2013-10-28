@@ -138,3 +138,7 @@ head program.c | tail -3
 ```sh
 tail -5 program.c | head -3
 ```
+lub (ten sam wynik, ale metodą z zadania 10)
+```sh
+tac program.c | head -5 | tail -3 | tac
+```
