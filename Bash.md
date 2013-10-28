@@ -123,3 +123,8 @@ rm -rf temp
 ```sh
 tar -xf temp.tar
 ```
+
+9\. Posprzątaj na swoim koncie.
+```sh
+rm -rf temp.tar
+```
