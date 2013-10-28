@@ -101,7 +101,7 @@ grep main program.c
 
 4\. Plikowi program.c nadaj następujące uprawnienia: właściciel – czytanie, pisanie, grupa – czytanie, pozostali użytkownicy: brak uprawnień. (chmod)
 ```sh
-chmod u=rw,g=r,o-rwx program.c
+chmod 640 program.c
 ```
 
 5\. Będąc w katalogu temp przenieś katalog wazne-sprawy do katalogu praca.
