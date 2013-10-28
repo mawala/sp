@@ -42,7 +42,7 @@
   cp ~/temp/praca/zlecenia/zrealizowane/{xaa,xab,xac} ~/temp/praca/dokumenty
 ```
 
-8\. Będąc w katalogu *dokumenty* połącz skopiowane 3 pliki w plik *odtworzono.txt*, tak aby otrzymać plik o zawartości identycznej z wykonano.txt: 
+8\. Będąc w katalogu *dokumenty* połącz skopiowane 3 pliki w plik *odtworzono.txt*, tak aby otrzymać plik o zawartości identycznej z *wykonano.txt*. 
 Następnie plik *odtworzono.txt* skopiuj do katalogu *wazne-sprawy*.
 ```sh
   cat xaa xab xac > odtworzono.txt
@@ -96,7 +96,7 @@ tail -4l program.c
 
 3\. W pliku *program.c* znajdź wszystkie wiersze z wystąpieniem słowa *„main”*. (grep)
 ```sh
-grep main program.c
+grep -w main program.c
 ```
 
 4\. Plikowi *program.c* nadaj następujące uprawnienia: właściciel – czytanie, pisanie, grupa – czytanie, pozostali użytkownicy: brak uprawnień. (chmod)
