@@ -5,31 +5,31 @@
   mkdir -p dom nauka/{c,logo,pascal} praca/{dokumenty,zlecenia/{niezrealizowane,zrealizowane}}
 ```
 
-2\. Przejdź do katalogu dom i utwórz katalog wazne-sprawy:
+2\. Przejdź do katalogu *dom* i utwórz katalog *wazne-sprawy*:
 ```sh
   cd dom
 
   mkdir wazne-sprawy
 ```
   
-3\. Wejdź do katalogu wazne-sprawy i utwórz tam pusty plik rachunki.txt:
+3\. Wejdź do katalogu *wazne-sprawy* i utwórz tam pusty plik *rachunki.txt*:
 ```sh
   cd wazne-sprawy
 
   touch rachunki.txt
 ```
 
-4\. Będąc w katalogu wazne-sprawy skopiuj plik rachunki.txt do katalogu zrealizowane:
+4\. Będąc w katalogu *wazne-sprawy* skopiuj plik *rachunki.txt* do katalogu zrealizowane:
 ```sh
   cp ./rachunki.txt ~/temp/praca/zlecenia/zrealizowane
 ```
 
-5\. Przejdź do katalogu zrealizowane i zmień nazwę pliku rachunki.txt na wykonano.txt:
+5\. Przejdź do katalogu zrealizowane i zmień nazwę pliku *rachunki.txt* na *wykonano.txt*:
 ```sh
   mv rachunki.txt wykonano.txt
 ```
 
-6\. Utwórz plik wykonano.txt wielkości 11 bajtów, następnie podziel go na pliki wielkości 5 bajtów. W ten sposób otrzymasz 3 pliki. (split):
+6\. Utwórz plik *wykonano.txt* wielkości 11 bajtów, następnie podziel go na pliki wielkości 5 bajtów. W ten sposób otrzymasz 3 pliki. (split):
 ```sh
   cat > wykonano.txt
   0123456789
@@ -37,20 +37,20 @@
   split -b 5 wykonano.txt
 ```
   
-7\. Będąc w katalogu logo skopiuj powyżej otrzymane 3 pliki do katalogu dokumenty:
+7\. Będąc w katalogu *logo* skopiuj powyżej otrzymane 3 pliki do katalogu dokumenty:
 ```sh
   cp ~/temp/praca/zlecenia/zrealizowane/{xaa,xab,xac} ~/temp/praca/dokumenty
 ```
 
-8\. Będąc w katalogu dokumenty połącz skopiowane 3 pliki w plik odtworzono.txt, tak aby otrzymać plik o zawartości identycznej z wykonano.txt: 
-Następnie plik odtworzono.txt skopiuj do katalogu wazne-sprawy.
+8\. Będąc w katalogu *dokumenty* połącz skopiowane 3 pliki w plik *odtworzono.txt*, tak aby otrzymać plik o zawartości identycznej z wykonano.txt: 
+Następnie plik *odtworzono.txt* skopiuj do katalogu *wazne-sprawy*.
 ```sh
   cat xaa xab xac > odtworzono.txt
   
   cp odtworzono.txt ~/temp/dom/wazne-sprawy
 ```
 
-9\. Będąc w katalogu wazne-sprawy sprawdź, czy są jakieś różnice w zawartości plików wykonano.txt i odtworzono.txt:
+9\. Będąc w katalogu *wazne-sprawy* sprawdź, czy są jakieś różnice w zawartości plików *wykonano.txt* i *odtworzono.txt*:
 ```sh
   diff -q odtworzono.txt ~/temp/praca/zlecenia/zrealizowane/wykonano.txt 
 ```
@@ -84,42 +84,42 @@ Następnie plik odtworzono.txt skopiuj do katalogu wazne-sprawy.
 
 ###Laboratorium 2
 
-1\. Wyświetl na ekran 2 pierwsze wiersze pliku program.c. (head)
+1\. Wyświetl na ekran 2 pierwsze wiersze pliku *program.c*. (head)
 ```sh
 head -2l program.c
 ```
 
-2\. Wyświetl na ekran 4 ostatnie wiersze pliku program.c. (head, tail)
+2\. Wyświetl na ekran 4 ostatnie wiersze pliku *program.c*. (head, tail)
 ```sh
 tail -4l program.c
 ```
 
-3\. W pliku program.c znajdź wszystkie wiersze z wystąpieniem słowa „main”. (grep)
+3\. W pliku *program.c* znajdź wszystkie wiersze z wystąpieniem słowa *„main”*. (grep)
 ```sh
 grep main program.c
 ```
 
-4\. Plikowi program.c nadaj następujące uprawnienia: właściciel – czytanie, pisanie, grupa – czytanie, pozostali użytkownicy: brak uprawnień. (chmod)
+4\. Plikowi *program.c* nadaj następujące uprawnienia: właściciel – czytanie, pisanie, grupa – czytanie, pozostali użytkownicy: brak uprawnień. (chmod)
 ```sh
 chmod 640 program.c
 ```
 
-5\. Będąc w katalogu temp przenieś katalog wazne-sprawy do katalogu praca.
+5\. Będąc w katalogu *temp* przenieś katalog *wazne-sprawy* do katalogu *praca*.
 ```sh
 mv dom/waznesprawy praca
 ```
 
-6\. Zarchiwizuj cały katalog temp. (zip i tar)
+6\. Zarchiwizuj cały katalog *temp*. (zip i tar)
 ```sh
 tar -cf temp.tar temp
 ```
 
-7\. Usuń katalog temp.
+7\. Usuń katalog *temp*.
 ```sh
 rm -rf temp
 ```
 
-8\. Odtwórz z archiwum katalog temp. (unzip i tar)
+8\. Odtwórz z archiwum katalog *temp*. (unzip i tar)
 ```sh
 tar -xf temp.tar
 ```
@@ -129,4 +129,12 @@ tar -xf temp.tar
 rm -rf temp.tar
 ```
 
-10\. Wyświetl 6,7,8 linijkę od góry z pliku program.c. Wyświetl 8,9,10 linijki od dołu z tego pliku.
+10\. Wyświetl linijki ze środka pliku *program.c*, licząc od góry (przykład: linijki 8,9,10)
+```sh
+head program.c | tail -3
+```
+
+11\. Wyświetl linijki ze środka tego pliku, licząc od dołu (przykład: linijki 3,4,5)
+```sh
+tail -5 program.c | head -3
+```
