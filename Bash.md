@@ -128,3 +128,5 @@ tar -xf temp.tar
 ```sh
 rm -rf temp.tar
 ```
+
+10\. Wyświetl 6,7,8 linijkę od góry z pliku program.c. Wyświetl 8,9,10 linijki od dołu z tego pliku.
