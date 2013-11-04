@@ -30,13 +30,13 @@ cat /etc/passwd | tr -d "\n"
 ```sh
 x=$(cat /etc/passwd) echo $x
 ```
-7\. Za pomocą filtru *tr* wykonaj modyfikację pliku *plik.txt*, polegającą na umieszczeniu każdego słowa w osobnej linii
+7\. Za pomocą filtru *tr* wykonaj modyfikację pliku *plik.txt*, polegającą na wypisaniu każdego słowa w osobnej linii
 ```sh
 cat plik.txt | tr " " "\n"
 ```
 8\.  Zlicz wszystkie pliki znajdujące się w katalogu */etc* i jego podkatalogach
 ```sh
-find /etc -type f 2>&1 | wc -l
+find /etc -type f 2>0 | wc -l
 ```
 9\. Napisać polecenie zliczające ilość znaków z pierwszych trzech linii pliku */etc/passwd*
 ```sh
