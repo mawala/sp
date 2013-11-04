@@ -34,9 +34,9 @@ x=$(cat /etc/passwd) echo $x
 ```sh
 cat plik.txt | tr " " "\n"
 ```
-8\.  Zlicz wszystkie pliki znajdujące się w katalogu */etc* i jego podkatalogach
+8\.  Zlicz wszystkie pliki znajdujące się w katalogu */var* i jego podkatalogach
 ```sh
-find /etc -type f 2>0 | wc -l
+find /var -type f 2>&0 | wc -l
 ```
 9\. Napisać polecenie zliczające ilość znaków z pierwszych trzech linii pliku */etc/passwd*
 ```sh
