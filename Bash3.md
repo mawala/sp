@@ -32,7 +32,7 @@ x=$(cat /etc/passwd) echo $x
 ```
 7\. Za pomocą filtru *tr* wykonaj modyfikację pliku *plik.txt*, polegającą na wypisaniu każdego słowa w osobnej linii
 ```sh
-cat plik.txt | tr " " "\n"
+cat plik.txt | tr -cs "a-zA-Z" "\n"
 ```
 8\.  Zlicz wszystkie pliki znajdujące się w katalogu */var* i jego podkatalogach
 ```sh
