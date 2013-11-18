@@ -6,7 +6,7 @@ ls -1F | sed -e '/[/]/d' | tr 'a-z' 'A-Z'
 ```
 2\. Wyświetl listę praw dostępu do plików w aktualnym katalogu, ich rozmiar i nazwę
 ```sh
-ls -goF | tr -s " " | cut -f 1,3,7 -d " " | tr " " "\t" | sed -e '/[/]/d'
+ls -hgoF --full-time | tr -s " " | cut -f 1,3,7 -d " " | sed -e '/[/]/d' | tr " " "\t"
 ```
 3\. Wyświetl listę plików w aktualnym katalogu, posortowaną według rozmiaru pliku
 ```sh
