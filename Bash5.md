@@ -27,3 +27,7 @@ systemowa data w formacie **rrrr-mm-dd**
 ```sh
 mkdir `date +%Y-%m-%d`
 ```
+*lepiej*
+```sh
+mkdir $(date +%Y-%m-%d)
+```
