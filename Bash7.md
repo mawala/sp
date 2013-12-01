@@ -21,7 +21,7 @@ done
 for filename in *
 do
   echo "$filename" | grep -q " "
-  if [ $? -eg $FOUND ]
+  if [ $? -eq $FOUND ]
   then
     fname=$filename
     n=$(echo $fname | sed -e "s/ /_/g")
