@@ -31,4 +31,25 @@ done
 
 exit 0
 ```
-2\. Napisać skrypt zawierający funkcję obliczającą silnię. Następnie należy obliczyć silnię z liczby, która jest argumentem skryptu\. W przypadku niepoprawnego argumentu należy wypisać odpowiedni komunikat\.
+2\. Napisać skrypt zawierający funkcję obliczającą silnię. Następnie należy obliczyć silnię z liczby, która jest
+argumentem skryptu\. W przypadku niepoprawnego argumentu należy wypisać odpowiedni komunikat\.
+```sh
+#!/bin/bash
+for arg in $1
+do
+  wynik=1
+  licznik=1
+  if [ $arg -ge 0 ]
+  then
+    while [ $licznik -le $arg ]
+    do
+      wynik=$[ $wynik * $licznik ]
+      licznik=$[ $licznik + 1 ]
+    done
+    echo "Silnia dla $1 = $wynik"
+  else
+    echo "$1 nie jest poprawnym argumentem"
+  fi
+done
+exit 0
+```
