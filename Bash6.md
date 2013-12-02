@@ -1,8 +1,12 @@
 ###Laboratorium 6
 
-1\. W pliku *plik.txt* znajdź wiersze zawierające co najmniej jeden znak
+1\. W pliku *plik.txt* znajdź wiersze zawierające co najmniej jeden znak, który widać
 ```sh
 grep --line-number . plik.txt
+```
+*lepiej*
+```sh
+grep [^[:space:][:cntrl:]] plik.txt
 ```
 2\. Znajdź w plikach *pl** wiersze rozpoczynające się od cyfry
 ```sh
