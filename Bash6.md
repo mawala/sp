@@ -4,7 +4,7 @@
 ```sh
 grep --line-number . plik.txt
 ```
-*lepiej*
+*lepiej*:
 ```sh
 grep [^[:space:][:cntrl:]] plik.txt
 ```
@@ -16,7 +16,7 @@ grep ^[0-9] pl*
 ```sh
 grep --extended-regexp '^.{8}r.*' *
 ```
-*lepiej*
+*lepiej*:
 ```sh
 egrep '^.{8}r.*' *
 ```
