@@ -16,6 +16,10 @@ grep ^[0-9] pl*
 ```sh
 grep --extended-regexp '^.{8}r.*' *
 ```
+*lepiej*
+```sh
+egrep '^.{8}r.*' *
+```
 4\. Policz, ilu użytkowników systemu używa powłoki bash (zgodnie z zapisami w pliku */etc/passwd*)
 ```sh
 grep -c bash /etc/passwd
